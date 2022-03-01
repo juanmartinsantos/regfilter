@@ -1,0 +1,60 @@
+Package: regfilter
+Version: 1.0.1
+Title: Elimination of Noisy Samples in Regression Datasets using Noise Filters
+Authors@R: c(
+    person(given = "Juan",
+           family = "Martin",
+           role = c("aut", "cre"),
+           email = "juanmartin@usal.es"),
+	person(given = "José A.",
+	       family = "Sáez",
+	       role = c("aut"),
+	       email = "joseasaezm@ugr.es"),
+	person(given = "Emilio",
+	       family = "Corchado",
+	       role = c("aut"),
+	       email = "escorchado@usal.es"),
+	person(given = "Pablo",
+	       family = "Morales",
+	       role = c("ctb"),
+	       comment= "Author of the NoiseFItersR package"),
+	person(given = "Julian",
+	       family = "Luengo",
+	       role = c("ctb"),
+	       comment= "Author of the NoiseFItersR package"),
+	person(given = "Luis P.F.",
+	       family = "Garcia",
+	       role = c("ctb"),
+		   comment= "Author of the NoiseFItersR package"),
+	person(given = "Ana C.",
+	       family = "Lorena",
+	       role = c("ctb"),
+		   comment= "Author of the NoiseFItersR package"),
+	person(given = "Andre C.P.L.F.",
+	       family = "de Carvalho",
+	       role = c("ctb"),
+		   comment= "Author of the NoiseFItersR package"),
+	person(given = "Francisco",
+	       family = "Herrera",
+	       role = c("ctb"),
+		   comment= "Author of the NoiseFItersR package")
+		   )
+Description: Traditional noise filtering methods aim at removing noisy samples from a classification dataset. This package adapts classic and recent filtering techniques to be used in regression problems. To do this, it uses the approach proposed in Martin et al. (2021) [<doi:10.1109/ACCESS.2021.3123151>]. Thus, the goal of the implemented noise filters is to eliminate samples with noise in regression datasets.
+License: GPL (>= 3)
+Depends: R (>= 3.2.0)
+Imports: e1071, FNN, gbm, modelr, nnet, randomForest, rpart
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+NeedsCompilation: no
+Author: Juan Martin [aut, cre],
+		José A. Sáez [aut],
+		Emilio Corchado [aut]
+Maintainer: Juan Martin <juanmartin@usal.es>
+Repository: CRAN
+Date/Publication: 2021-12-03 10:30:00 UTC
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
