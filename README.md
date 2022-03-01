@@ -13,5 +13,8 @@ install.packages('regfilter')
 
 ## Install the development version from GitHub:
 ```r
-pak::pak('juanmartinsantos/regfilter/pkg/regfilter')
+install.packages("devtools")
+library(devtools)
+
+install_github("juanmartinsantos/regfilter/pkg/regfilter")
 ```
