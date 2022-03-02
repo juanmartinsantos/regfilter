@@ -3,9 +3,9 @@
 <!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/caret)](http://cran.r-project.org/web/packages/caret) -->
   
 # regfilter (Regresand Noise filters)
-
+<p style="text-align:justify;">
 The **regfilter** package contains filtering techniques to remove noisy samples in regression datasets. It adapts up to a total of 14 classic and recent noise filters to be used in regression problems using the approach proposed in [Martin et al. (2021)](https://ieeexplore.ieee.org/document/9585469). 
-
+</p>
 ## Install the current release from CRAN:
 ```r
 install.packages('regfilter')
