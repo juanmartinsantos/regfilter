@@ -1,0 +1,64 @@
+#####################################################
+#####################################################
+#####################################################
+# R CMD check results
+── R CMD check results ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── regfilter 1.0.1 ────
+Duration: 1m 11.3s
+
+0 errors ✓ | 0 warnings ✓ | 0 notes ✓
+
+#####################################################
+#####################################################
+#####################################################
+# CRAN check results
+## Test environments
+- R-hub windows-x86_64-devel (r-devel)
+- R-hub ubuntu-gcc-release (r-release)
+- R-hub fedora-clang-devel (r-devel)
+
+## R CMD check results
+> On windows-x86_64-devel (r-devel), ubuntu-gcc-release (r-release), fedora-clang-devel (r-devel)
+  checking CRAN incoming feasibility ... NOTE
+  Maintainer: 'Juan Martin <juanmartin@usal.es>'
+  
+  New submission
+
+> On windows-x86_64-devel (r-devel)
+  checking for detritus in the temp directory ... NOTE
+  Found the following files/directories:
+    'lastMiKTeXException'
+
+0 errors ✓ | 0 warnings ✓ | 2 notes x
+
+#####################################################
+#####################################################
+#####################################################
+# Tests results
+ℹ Loading regfilter
+ℹ Testing regfilter
+✓ | F W S  OK | Context
+✓ |        10 | regAENN                                                                                                                                            
+✓ |        10 | regBBNR [0.1s]                                                                                                                                     
+✓ |         9 | regCNN                                                                                                                                             
+✓ |        10 | regCVCF                                                                                                                                            
+✓ |        10 | regDF [0.8s]                                                                                                                                       
+✓ |        10 | regEF [0.1s]                                                                                                                                       
+✓ |        10 | regENN                                                                                                                                             
+✓ |         9 | regFMF [0.9s]                                                                                                                                      
+✓ |        10 | regGE                                                                                                                                              
+✓ |         9 | regHRRF [0.2s]                                                                                                                                     
+✓ |        10 | regIPF [0.4s]                                                                                                                                      
+✓ |         9 | regIRF                                                                                                                                             
+✓ |        10 | regRND [7.3s]                                                                                                                                      
+✓ |         9 | regRNN [0.1s]                                                                                                                                      
+
+══ Results ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+Duration: 10.3 s
+
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 135 ]
+
+#####################################################
+#####################################################
+#####################################################
+# LICENSE comment
+This package is a derivative work of the NoiseFiltersR package, licensed under GPL-3, of which it uses some conveniently modified and adapted functions. This code therefore is also licensed under the terms of the GNU Public License, version 3.
