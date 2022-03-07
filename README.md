@@ -10,6 +10,8 @@
 install.packages('regfilter')
 ```
 
+Also, the current release version can be found on [CRAN](https://cran.r-project.org/web/packages/regfilter/index.html)
+
 ## Install the development version from GitHub:
 ```r
 install.packages("devtools")
@@ -19,3 +21,5 @@ devtools::install_github("juanmartinsantos/regfilter/pkg/regfilter")
 
 ## Documentation:
 Detailed documentation is at https://cran.r-project.org/web/packages/regfilter/vignettes/regfilter.html
+
+https://cran.r-project.org/web/packages/regfilter/index.html
