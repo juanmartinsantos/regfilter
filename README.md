@@ -16,3 +16,6 @@ install.packages("devtools")
 
 devtools::install_github("juanmartinsantos/regfilter/pkg/regfilter")
 ```
+
+## Documentation:
+Detailed documentation is at https://cran.r-project.org/web/packages/regfilter/vignettes/regfilter.html
