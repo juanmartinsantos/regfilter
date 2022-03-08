@@ -53,7 +53,6 @@ regRND <- function(x, ...) UseMethod("regRND")
 #' \emph{IEEE Access}, 9:145800-145816, 2021.
 #' \doi{https://doi.org/10.1109/ACCESS.2021.3123151}.
 #' @examples
-#' \donttest{
 #' # load the dataset
 #' data(rock)
 #'
@@ -66,11 +65,11 @@ regRND <- function(x, ...) UseMethod("regRND")
 #'
 #' # usage of the method for class formula
 #' set.seed(9)
-#' out.frm <- regRND(formula = perm ~ ., data = rock[,])
+#' out.frm <- regRND(formula = perm ~ ., data = rock)
 #'
 #' # check the match of noisy indices
 #' all(out.def$idnoise == out.frm$idnoise)
-#' }
+#' 
 #' @seealso \code{\link{regENN}}, \code{\link{regAENN}}, \code{\link{regGE}}, \code{\link{print.rfdata}}, \code{\link{summary.rfdata}}
 #' @name regRND
 NULL
