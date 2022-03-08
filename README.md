@@ -1,7 +1,6 @@
 <!-- [![R-CMD-check](https://github.com/topepo/caret/workflows/R-CMD-check/badge.svg)](https://github.com/topepo/caret/actions)
 [![Coverage Status](https://coveralls.io/repos/topepo/caret/badge.svg?branch=master)](https://coveralls.io/r/topepo/caret?branch=master) -->
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/regfilter)](http://cran.r-project.org/web/packages/regfilter)  
-[![Downloads](https://cranlogs.r-pkg.org/badges/regfilter)](http://cran.rstudio.com/package=regfilter)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/regfilter)](http://cran.r-project.org/web/packages/regfilter) [![Downloads](https://cranlogs.r-pkg.org/badges/regfilter)](http://cran.rstudio.com/package=regfilter)
 
 # regfilter (Regresand Noise filters)
 <p style="text-align:justify;"> The <strong>regfilter</strong> package contains filtering techniques to remove noisy samples in regression datasets. It adapts up to a total of 14 classic and recent noise filters to be used in regression problems using the approach proposed in <a href="https://ieeexplore.ieee.org/document/9585469">Martin <i>et al.</i> (2021)</a>. </p>
