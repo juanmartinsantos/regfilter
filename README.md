@@ -5,12 +5,12 @@
 
 The current release version can be found on [CRAN](https://cran.r-project.org/web/packages/regfilter/index.html) or can also be downloaded using the commands below:
 
-## Install the current release from CRAN:
+## Install in R from CRAN:
 ```r
 install.packages('regfilter')
 ```
 
-## Install the development version from GitHub:
+## Install in R from GitHub:
 ```r
 install.packages("devtools")
 
