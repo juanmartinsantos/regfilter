@@ -18,6 +18,6 @@ devtools::install_github("juanmartinsantos/regfilter/pkg/regfilter")
 ```
 
 ## Documentation:
-<!--- Detailed documentation can be found [here](https://cran.r-project.org/web/packages/regfilter/vignettes/regfilter.html)--->
+Detailed documentation can be found [here](https://cran.r-project.org/web/packages/regfilter/vignettes/regfilter.html)
 
-<p>Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>.</p>
+
