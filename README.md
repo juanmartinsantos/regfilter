@@ -18,4 +18,4 @@ devtools::install_github("juanmartinsantos/regfilter/pkg/regfilter")
 ```
 
 ## Documentation:
-Detailed documentation can be found [here](https://cran.r-project.org/web/packages/regfilter/vignettes/regfilter.html)
+Detailed documentation can be found [here](https://cran.r-project.org/web/packages/regfilter/vignettes/regfilter.html){:target="_blank" rel="noopener"}
