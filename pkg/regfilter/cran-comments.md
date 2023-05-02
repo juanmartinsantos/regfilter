@@ -17,18 +17,16 @@ Duration: 1m 11.3s
 - R-hub fedora-clang-devel (r-devel)
 
 ## R CMD check results
-> On windows-x86_64-devel (r-devel), ubuntu-gcc-release (r-release), fedora-clang-devel (r-devel)
-  checking CRAN incoming feasibility ... NOTE
-  Maintainer: 'Juan Martin <juanmartin@usal.es>'
-  
-  Days since last update: 2
-
-> On windows-x86_64-devel (r-devel)
+❯ On windows-x86_64-devel (r-devel)
   checking for detritus in the temp directory ... NOTE
   Found the following files/directories:
     'lastMiKTeXException'
 
-0 errors ✓ | 0 warnings ✓ | 2 notes x
+❯ On ubuntu-gcc-release (r-release), fedora-clang-devel (r-devel)
+  checking HTML version of manual ... NOTE
+  Skipping checking HTML validation: no command 'tidy' found
+
+0 errors ✔ | 0 warnings ✔ | 2 notes ✖
 
 #####################################################
 #####################################################

@@ -18,11 +18,11 @@ A list including information related to the noise filtering process contained in
 
 \item{xclean}{a data frame with the input attributes of clean samples (without errors).}
 \item{yclean}{a double vector with the output regressand of clean samples (without errors).}
-\item{numclean}{an integer vector with the amount of clean samples.}
+\item{numclean}{an integer with the amount of clean samples.}
 \item{idclean}{an integer vector with the indices of clean samples.}
 \item{xnoise}{a data frame with the input attributes of noisy samples (with errors).}
 \item{ynoise}{a double vector with the output regressand of noisy samples (with errors).}
-\item{numnoise}{an integer vector with the amount of noisy samples.}
+\item{numnoise}{an integer with the amount of noisy samples.}
 \item{idnoise}{an integer vector with the indices of noisy samples.}
 \item{filter}{the full name of the noise filter used.}
 \item{param}{a list of the argument values.}
@@ -40,7 +40,7 @@ dataset contained in the \code{object} of class \code{rfdata}.
 The information offered is as follows:
 \itemize{
    \item the function call.
-   \item the name of the regressand noise filter.
+   \item the name of the regression noise filter.
    \item the parameters associated with the noise filter.
    \item the number of noisy and clean samples in the dataset.
    \item the indices of the noisy and clean samples (if \code{showid = TRUE}).

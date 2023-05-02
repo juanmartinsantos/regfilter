@@ -28,11 +28,11 @@ regHRRF <- function(x, ...) UseMethod("regHRRF")
 #' This function returns an object of class \code{rfdata}, which contains information related to the noise filtering process in the form of a list with the following elements:
 #' \item{xclean}{a data frame with the input attributes of clean samples (without errors).}
 #' \item{yclean}{a double vector with the output regressand of clean samples (without errors).}
-#' \item{numclean}{an integer vector with the amount of clean samples.}
+#' \item{numclean}{an integer with the amount of clean samples.}
 #' \item{idclean}{an integer vector with the indices of clean samples.}
 #' \item{xnoise}{a data frame with the input attributes of noisy samples (with errors).}
 #' \item{ynoise}{a double vector with the output regressand of noisy samples (with errors).}
-#' \item{numnoise}{an integer vector with the amount of noisy samples.}
+#' \item{numnoise}{an integer with the amount of noisy samples.}
 #' \item{idnoise}{an integer vector with the indices of noisy samples.}
 #' \item{filter}{the full name of the noise filter used.}
 #' \item{param}{a list of the argument values.}

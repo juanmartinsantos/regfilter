@@ -7,8 +7,8 @@
 #' noisy dataset contained in the object \code{x} of class \code{rfdata}.
 #' The information offered is as follows:
 #' \itemize{
-#'    \item the name of the noise filtering model.
-#'    \item the parameters associated with the noise filtering model.
+#'    \item the name of the regression noise filter.
+#'    \item the parameters associated with the noise filter.
 #'    \item the number of noisy and clean samples in the dataset.
 #' }
 #'
@@ -32,7 +32,7 @@
 #'
 #' @export
 print.rfdata <- function(x, ...){
-  cat("\n## Noise model: ", x$filter, sep="\n")
+  cat("\n## Noise filter: ", x$filter, sep="\n")
 
   if(!is.null(x$param)){
     cat("\n## Parameters:\n")
@@ -41,12 +41,12 @@ print.rfdata <- function(x, ...){
     }
   }
 
-  cat("\n## Number of noisy and clean samples values:\n")
+  cat("\n## Number of noisy and clean samples:\n")
   ncle <- x$numclean
   nnoi <- x$numnoise
   ntot <- ncle+nnoi
-  cat("- Noisy values: ", nnoi,"/",ntot," (",nnoi*100/ntot,"%)","\n",sep="")
-  cat("- Clean values: ", ncle,"/",ntot," (",ncle*100/ntot,"%)","\n",sep="")
+  cat("- Noisy samples: ", nnoi,"/",ntot," (",nnoi*100/ntot,"%)","\n",sep="")
+  cat("- Clean samples: ", ncle,"/",ntot," (",ncle*100/ntot,"%)","\n",sep="")
 
 }
 
@@ -63,7 +63,7 @@ print.rfdata <- function(x, ...){
 #' The information offered is as follows:
 #' \itemize{
 #'    \item the function call.
-#'    \item the name of the regressand noise filter.
+#'    \item the name of the regression noise filter.
 #'    \item the parameters associated with the noise filter.
 #'    \item the number of noisy and clean samples in the dataset.
 #'    \item the indices of the noisy and clean samples (if \code{showid = TRUE}).
@@ -77,11 +77,11 @@ print.rfdata <- function(x, ...){
 #'
 #' \item{xclean}{a data frame with the input attributes of clean samples (without errors).}
 #' \item{yclean}{a double vector with the output regressand of clean samples (without errors).}
-#' \item{numclean}{an integer vector with the amount of clean samples.}
+#' \item{numclean}{an integer with the amount of clean samples.}
 #' \item{idclean}{an integer vector with the indices of clean samples.}
 #' \item{xnoise}{a data frame with the input attributes of noisy samples (with errors).}
 #' \item{ynoise}{a double vector with the output regressand of noisy samples (with errors).}
-#' \item{numnoise}{an integer vector with the amount of noisy samples.}
+#' \item{numnoise}{an integer with the amount of noisy samples.}
 #' \item{idnoise}{an integer vector with the indices of noisy samples.}
 #' \item{filter}{the full name of the noise filter used.}
 #' \item{param}{a list of the argument values.}
@@ -132,7 +132,7 @@ print.sum.rfdata <- function(x, ...){
     id <- paste0(x$idnoise, collapse = ", ")
     if(id == "")
       id <- "-"
-    cat("- Output class: ", id, "\n", sep = "")
+    cat(id, "\n", sep = "")
   }
 
 }

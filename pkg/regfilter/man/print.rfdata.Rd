@@ -23,8 +23,8 @@ This function presents the basic information of the regression noise filter and 
 noisy dataset contained in the object \code{x} of class \code{rfdata}.
 The information offered is as follows:
 \itemize{
-   \item the name of the noise filtering model.
-   \item the parameters associated with the noise filtering model.
+   \item the name of the regression noise filter.
+   \item the parameters associated with the noise filter.
    \item the number of noisy and clean samples in the dataset.
 }
 }

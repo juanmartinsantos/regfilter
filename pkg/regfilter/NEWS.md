@@ -9,3 +9,7 @@
 # regfilter 1.0.2
 
 * Fixed some issues on M1mac and noLD.
+
+# regfilter 1.0.3
+
+* Minor modifications.
