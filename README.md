@@ -1,7 +1,7 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/regfilter)](http://cran.r-project.org/web/packages/regfilter)  [![Downloads](https://cranlogs.r-pkg.org/badges/regfilter)](https://cran.r-project.org/package=regfilter) [![Coverage Status](https://img.shields.io/badge/Coverage%20Status-92.54-orange)](http://cran.r-project.org/web/packages/regfilter)
  <!-- to hide-->
 # regfilter
-<p style="text-align:justify;"> The <strong>regfilter</strong> package contains filtering techniques to remove noisy samples in regression datasets. It adapts up to a total of 14 classic and recent noise filters to be used in regression problems using the approach proposed in <a href="https://ieeexplore.ieee.org/document/9585469">Martin <i>et al.</i> (2021)</a>. </p>
+<p style="text-align:justify;"> The <strong>regfilter</strong> package adapts classic and recent filtering techniques for use in regression problems, and it also incorporates methods specifically designed for regression data (<a href="https://ieeexplore.ieee.org/document/9585469">Martin <i>et al.</i> (2021)</a>, <a href="https://doi:10.1109/ACCESS.2021.3123151">Arnaiz-Gonzalez <i>et al.</i> (2016)</a>). </p>
 
 The current release version can be found on [CRAN](https://cran.r-project.org/web/packages/regfilter/index.html) or can also be downloaded using the commands below:
 
