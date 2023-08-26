@@ -41,7 +41,7 @@ regDF <- function(x, ...) UseMethod("regDF")
 #' \item{param}{a list of the argument values.}
 #' \item{call}{the function call.}
 #'
-#' Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+#' Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 #'
 #' @references
 #' L. Garcia, A. Lorena and A. Carvalho,
@@ -112,6 +112,9 @@ regDF.default <- function(x, y, t=0.2, nfolds=10, m=3, vote=FALSE, ...){
   }
   if(nfolds < 3){
     stop("number of \"Nearest-Neighbor\" must be greater than 3")
+  }
+  if(!(isTRUE(vote) | isFALSE(vote))){
+    stop("number of \"vote\" must be TRUE or FALSE")
   }
 
   dataset <- cbind(x, y)

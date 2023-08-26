@@ -159,6 +159,48 @@ test_that("Invalid threshold value", {
 ###############################################
 ###############################################
 ###############################################
+test_that("Invalid p value", {
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  
+  # Default method
+  expect_error(regIPF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)], p=2))
+  # Class formula method
+  expect_error(regIPF(formula = perm ~ ., data = rock, p=2))
+})
+
+###############################################
+###############################################
+###############################################
+test_that("Invalid s value", {
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  
+  # Default method
+  expect_error(regIPF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)], s=0))
+  # Class formula method
+  expect_error(regIPF(formula = perm ~ ., data = rock, s=0))
+})
+
+###############################################
+###############################################
+###############################################
+test_that("Invalid i value", {
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  
+  # Default method
+  expect_error(regIPF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)], i=2))
+  # Class formula method
+  expect_error(regIPF(formula = perm ~ ., data = rock, i=2))
+})
+
+###############################################
+###############################################
+###############################################
 test_that("Invalid nfolds value", {
   data(rock)
   set.seed(9)
@@ -169,3 +211,30 @@ test_that("Invalid nfolds value", {
   expect_error(regIPF(formula = perm ~ ., data = rock, nfolds=1))
 })
 
+###############################################
+###############################################
+###############################################
+test_that("Invalid vote value", {
+  data(rock)
+  set.seed(9)
+  
+  # Default method
+  expect_error(regIPF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)], vote = "si"))
+  # Class formula method
+  expect_error(regIPF(formula = perm ~ ., data = rock, vote = "si"))
+})
+
+###############################################
+###############################################
+###############################################
+test_that('plot function',{
+  
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  out <- regIPF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)])
+  
+  bar_plots <- plot(x = out, var = c(1:4), fun = "mean")
+  expect_s3_class(bar_plots, "ggplot")
+  
+})

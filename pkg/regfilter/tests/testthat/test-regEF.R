@@ -168,3 +168,17 @@ test_that("Invalid nfolds value", {
   expect_error(regEF(formula = perm ~ ., data = rock, nfolds=1))
 })
 
+###############################################
+###############################################
+###############################################
+test_that('plot function',{
+  
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  out <- regEF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)])
+  
+  bar_plots <- plot(x = out, var = c(1:4), fun = "mean")
+  expect_s3_class(bar_plots, "ggplot")
+  
+})

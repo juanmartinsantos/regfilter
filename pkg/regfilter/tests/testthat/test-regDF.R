@@ -169,3 +169,43 @@ test_that("Invalid nfolds value", {
   expect_error(regDF(formula = perm ~ ., data = rock, nfolds=1))
 })
 
+###############################################
+###############################################
+###############################################
+test_that("Invalid m value", {
+  data(rock)
+  set.seed(9)
+  
+  # Default method
+  expect_error(regDF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)], m = 12))
+  # Class formula method
+  expect_error(regDF(formula = perm ~ ., data = rock, m = 12))
+})
+
+###############################################
+###############################################
+###############################################
+test_that("Invalid vote value", {
+  data(rock)
+  set.seed(9)
+  
+  # Default method
+  expect_error(regDF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)], vote = "si"))
+  # Class formula method
+  expect_error(regDF(formula = perm ~ ., data = rock, vote = "si"))
+})
+
+###############################################
+###############################################
+###############################################
+test_that('plot function',{
+  
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  out <- regDF(x = rock[,-ncol(rock)], y = rock[,ncol(rock)])
+  
+  bar_plots <- plot(x = out, var = c(1:4), fun = "mean")
+  expect_s3_class(bar_plots, "ggplot")
+  
+})

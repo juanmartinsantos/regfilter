@@ -169,3 +169,17 @@ test_that("Invalid k value", {
   expect_error(regBBNR(formula = perm ~ ., data = rock, k=0))
 })
 
+###############################################
+###############################################
+###############################################
+test_that('plot function',{
+  
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  out <- regBBNR(x = rock[,-ncol(rock)], y = rock[,ncol(rock)])
+  
+  bar_plots <- plot(x = out, var = c(1:4), fun = "mean")
+  expect_s3_class(bar_plots, "ggplot")
+  
+})

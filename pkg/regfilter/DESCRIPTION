@@ -1,5 +1,5 @@
 Package: regfilter
-Version: 1.0.3
+Version: 1.1.0
 Title: Elimination of Noisy Samples in Regression Datasets using Noise Filters
 Authors@R: c(
     person(given = "Juan",
@@ -39,11 +39,23 @@ Authors@R: c(
 	       role = c("ctb"),
 		   comment= "Author of the NoiseFiltersR package")
 		   )
-Description: Traditional noise filtering methods aim at removing noisy samples from a classification dataset. This package adapts classic and recent filtering techniques to be used in regression problems. To do this, it uses the approach proposed in Martin (2021) [<doi:10.1109/ACCESS.2021.3123151>]. Thus, the goal of the implemented noise filters is to eliminate samples with noise in regression datasets.
+Description: Traditional noise filtering methods aim at removing noisy samples from a classification dataset. This package adapts classic and recent filtering techniques for use in regression problems, and it also incorporates methods specifically designed for regression data. In order to do this, it uses approaches proposed in the specialized literature, such as Martin et al. (2021) [<doi:10.1109/ACCESS.2021.3123151>] and Arnaiz-Gonzalez et al. (2016) [<doi:10.1016/j.eswa.2015.12.046>]. Thus, the goal of the implemented noise filters is to eliminate samples with noise in regression datasets.
 License: GPL (>= 3)
 URL: https://github.com/juanmartinsantos/regfilter
 Depends: R (>= 3.2.0)
-Imports: e1071, FNN, gbm, modelr, nnet, randomForest, rpart
+Imports: 
+    e1071,
+    FNN,
+    gbm,
+    modelr,
+    nnet,
+    randomForest,
+    rpart,
+    UBL,
+    arules,
+    infotheo,
+    entropy,
+    ggplot2
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 NeedsCompilation: no

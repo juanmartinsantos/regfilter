@@ -16,7 +16,6 @@ regFMF <- function(x, ...) UseMethod("regFMF")
 #' The implementation of this noise filter to be used in regression problems follows the proposal of Martín \emph{et al.} (2021),
 #' which is based on the use of a noise threshold (\code{t}) to determine the similarity between the output variable of the samples.
 #'
-#'
 #' @param x a data frame of input attributes.
 #' @param y a double vector with the output regressand of each sample.
 #' @param t a double in [0,1] with the \emph{threshold} used by regression noise filter (default: 0.2).
@@ -39,7 +38,7 @@ regFMF <- function(x, ...) UseMethod("regFMF")
 #' \item{param}{a list of the argument values.}
 #' \item{call}{the function call.}
 #'
-#' Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+#' Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 #'
 #' @references
 #' L. Garcia, A. Lorena, S. Matwin and A. de Carvalho,
@@ -88,6 +87,9 @@ regFMF.default <- function(x, y, t=0.2, vote=FALSE, ...){
   }
   if(!is.numeric(y)){
     stop('y: it must be numerical')
+  }
+  if(any(t < 0) || any(t > 1)){
+    stop("argument \"threshold\" must be in [0,1]")
   }
 
   dataset <- cbind(x, y)

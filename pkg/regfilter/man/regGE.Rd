@@ -40,7 +40,7 @@ This function returns an object of class \code{rfdata}, which contains informati
 \item{param}{a list of the argument values.}
 \item{call}{the function call.}
 
-Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 }
 \description{
 Application of the regGE noise filtering method in a regression dataset.

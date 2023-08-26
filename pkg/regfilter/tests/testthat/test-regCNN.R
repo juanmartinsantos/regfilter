@@ -155,3 +155,17 @@ test_that("Invalid threshold value", {
   expect_error(regCNN(formula = perm ~ ., data = rock, t=2))
 })
 
+###############################################
+###############################################
+###############################################
+test_that('plot function',{
+  
+  # load the dataset
+  data(rock)
+  set.seed(9)
+  out <- regCNN(x = rock[,-ncol(rock)], y = rock[,ncol(rock)])
+  
+  bar_plots <- plot(x = out, var = c(1:4), fun = "mean")
+  expect_s3_class(bar_plots, "ggplot")
+  
+})

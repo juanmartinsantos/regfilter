@@ -38,7 +38,7 @@ This function returns an object of class \code{rfdata}, which contains informati
 \item{param}{a list of the argument values.}
 \item{call}{the function call.}
 
-Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 }
 \description{
 Application of the regCNN noise filtering method in a regression dataset.
@@ -72,7 +72,7 @@ all(out.def$idnoise == out.frm$idnoise)
 \references{
 L. Devroye, L. Gyorfi and G. Lugosi,
 \strong{Condensed and edited nearest neighbor rules.}
-\emph{in: A Probabilistic Theory of Pattern Recognition}, 303-313, 1996.
+\emph{In: A Probabilistic Theory of Pattern Recognition}, 31:303-313, 1996.
 \doi{https://doi.org/10.1007/978-1-4612-0711-5_19}.
 
 J. Martín, J. A. Sáez and E. Corchado,

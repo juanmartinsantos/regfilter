@@ -20,7 +20,7 @@ regEF <- function(x, ...) UseMethod("regEF")
 #' @param y a double vector with the output regressand of each sample.
 #' @param t a double in [0,1] with the \emph{threshold} used by regression noise filter (default: 0.2).
 #' @param nfolds number of folds in which the dataset is split (default: 10).
-#' @param vote a logical indicating if the consensus voting (\code{TRUE}) or majority voting (\code{FALSE}) is used (default: \code{FALSE}).
+#' @param vote a logical indicating if the consensus voting (\code{TRUE}) or majority voting (\code{FALSE}) is used (default: \code{TRUE}).
 #' @param formula a formula with the output regressand and, at least, one input attribute.
 #' @param data a data frame in which to interpret the variables in the formula.
 #' @param ... other options to pass to the function.
@@ -39,7 +39,7 @@ regEF <- function(x, ...) UseMethod("regEF")
 #' \item{param}{a list of the argument values.}
 #' \item{call}{the function call.}
 #'
-#' Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+#' Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 #'
 #' @references
 #' C. Brodley and M. Friedl,

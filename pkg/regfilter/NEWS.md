@@ -13,3 +13,7 @@
 # regfilter 1.0.3
 
 * Minor modifications.
+
+# regfilter 1.1.0
+
+* New noise filters have been added. Additionally, a plot function has been integrated to display the filtering process.

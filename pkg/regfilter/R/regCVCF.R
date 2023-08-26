@@ -39,7 +39,7 @@ regCVCF <- function(x, ...) UseMethod("regCVCF")
 #' \item{param}{a list of the argument values.}
 #' \item{call}{the function call.}
 #'
-#' Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+#' Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 #'
 #' @references
 #' S. Verbaeten and A. Van,

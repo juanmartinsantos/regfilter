@@ -113,7 +113,6 @@ summary.rfdata <- function(object, ..., showid = FALSE){
 ###############################################################
 ###############################################################
 ###############################################################
-
 #' @export
 print.sum.rfdata <- function(x, ...){
 
@@ -134,9 +133,94 @@ print.sum.rfdata <- function(x, ...){
       id <- "-"
     cat(id, "\n", sep = "")
   }
-
 }
 
 ###############################################################
 ###############################################################
 ###############################################################
+###############################################################
+###############################################################
+###############################################################
+#' Plot function for class rfdata
+#'
+#' Graphical representation that allows for comparing data distributions before and after the noise filtering process.
+#'
+#' This function generates a plot for each of the variables specified by the \code{var} parameter,
+#' allowing the comparison of their value distributions before filtering, using the descriptive statistic specified by \code{fun},
+#' with the distributions of the data from samples identified as clean and noisy by the filtering method.
+#'
+#' @param x an object of \code{rfdata} class.
+#' @param var an integer vector with the indices of variables whose distributions are compared, 
+#' considering the attributes in the order in which they appear in the original data, with the output variable in the last position (default = \code{c(1)}).
+#' @param fun a character containing the name of the descriptive statistic function to compute for each distribution of the variable, 
+#' or a user-defined function that returns a value from a distribution of numeric values (default: \code{"mean"}). 
+#' Some options for fun include "mean", "median" or "sd" (standard deviation).
+#' @param ... other options to pass to the function.
+#'
+#' @return An object of class \code{ggplot} that graphically represents the data distributions before and after the noise filtering.
+#'
+#' @examples
+#' # load the dataset
+#' data(rock)
+#'
+#' # apply the regression noise filter
+#' set.seed(9)
+#' output <- regAENN(x = rock[,-ncol(rock)], y = rock[,ncol(rock)])
+#' 
+#' # comparison chart of data distributions before and after the filtering process
+#' plot(x = output, var = c(1:4), fun = "mean")
+#'
+#' @seealso \code{\link{print.rfdata}}, \code{\link{summary.rfdata}}
+#' 
+#' @export
+#' @import "ggplot2"
+plot.rfdata <- function(x, ..., var = c(1), fun = "mean"){
+  
+  ######### check for errors #########
+  if(!inherits(x, "rfdata")){
+    stop("argument \"x\" must be a class rfdata")
+  }
+  
+  # Create the three datasets
+  data_clean <- cbind(x$xclean, x$yclean)
+  names(data_clean)[ncol(data_clean)] <- "output"
+  
+  data_noise <- cbind(x$xnoise, x$ynoise)
+  names(data_noise) <- names(data_clean)
+  
+  data_ori <- rbind(data_clean, data_noise)
+  names(data_ori) <- names(data_clean)
+  
+  # Get chosen attributes
+  value_ori <- apply(X = data_ori[, var, drop = FALSE], MARGIN = 2, FUN = get(fun))
+  value_clean <- apply(X = data_clean[, var, drop = FALSE], MARGIN = 2, FUN = get(fun))
+  value_noise <- apply(X = data_noise[, var, drop = FALSE], MARGIN = 2, FUN = get(fun))
+  
+  # Create data.frame to plot
+  d_val <- c(value_ori, value_clean, value_noise)
+  d_var <- rep(names(data_ori), times = 3)  
+  d_dat <- rep(c("Original", "Clean", "Noisy"), each = length(var))
+  dataplot <- data.frame(d_val, d_var, d_dat)
+  
+  order_categories <- c("Original", "Clean", "Noisy")
+  dataplot$d_dat <- factor(dataplot$d_dat, levels = order_categories)
+  dataplot$d_var <- factor(dataplot$d_var, levels = names(data_ori)[var])
+  
+  # Create final plot
+  bar_plots <- ggplot(dataplot, aes(x = d_dat, y = d_val, fill = d_dat)) +
+    geom_bar(stat = "identity") +
+    facet_grid(d_var ~ ., scales = "free_y", switch = "y") +
+    labs(x = "Dataset", y = "Variable") +
+    theme_minimal() +
+    theme(panel.spacing = unit(2, "lines"),
+          panel.border = element_rect(color = "black", fill = NA, linewidth = 1),
+          legend.position="none",
+          plot.title = element_text(hjust = 0.5, size = 16), 
+          axis.text = element_text(size = 10, face = "bold"), 
+          axis.title = element_text(size = 10, face = "bold")) +
+    scale_fill_manual(values = c("#4169E1", "#008000", "#FF0000"))
+  
+  bar_plots <- bar_plots + ggtitle(paste0("Noise filtering process - ", fun, " comparison"))
+  
+  return(bar_plots)
+}

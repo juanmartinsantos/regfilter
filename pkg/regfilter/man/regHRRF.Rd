@@ -40,15 +40,15 @@ This function returns an object of class \code{rfdata}, which contains informati
 \item{param}{a list of the argument values.}
 \item{call}{the function call.}
 
-Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 }
 \description{
 Application of the regHRRF noise filtering method in a regression dataset.
 }
 \details{
-\code{HRRF} is an adaptation of \emph{Hybrid Repair-Remove Filter} (HRRF) found in the field of classification, which builds a classifier set using
+\code{regHRRF} is an adaptation of \emph{Hybrid Repair-Remove Filter} (HRRF) found in the field of classification, which builds a classifier set using
 SVM, MLPNN, CART and k-NN (\code{k}= 1, 3 and 5) on the dataset. HRRF removes noisy samples depending on chosen \emph{voting} scheme
-(indicated by the argument \code{vote}): if equal to \code{TRUE},a consensus voting is used (in which a sample is removed if it is misclassified by all the models);
+(indicated by the argument \code{vote}): if equal to \code{TRUE}, a consensus voting is used (in which a sample is removed if it is misclassified by all the models);
 if equal to \code{FALSE}, a majority voting is used (in which a sample is removed if it is misclassified by more than a half of the models).
 The process is repeated while the prediction accuracy (over the original dataset) of the ensemble increases.
 The implementation of this noise filter to be used in regression problems follows the proposal of Martín \emph{et al.} (2021),

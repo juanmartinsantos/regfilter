@@ -9,7 +9,7 @@ regRNN <- function(x, ...) UseMethod("regRNN")
 #' Application of the regRNN noise filtering method in a regression dataset.
 #'
 #' In classification, \emph{Reduced Nearest Neighbors} (RNN) is an enhancement of CNN that includes one more step,
-#' which removes samples in the dataset that do not affect the performance of the k-NN classifier.
+#' which removes samples in the dataset that do not affect the performance of the \emph{k}-NN classifier.
 #' The implementation of this noise filter to be used in regression problems follows the proposal of Martín \emph{et al.} (2021),
 #' which is based on the use of a noise threshold (\code{t}) to determine the similarity between the output variable of the samples.
 #'
@@ -34,7 +34,7 @@ regRNN <- function(x, ...) UseMethod("regRNN")
 #' \item{param}{a list of the argument values.}
 #' \item{call}{the function call.}
 #'
-#' Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+#' Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 #'
 #' @references
 #' G. Gates,

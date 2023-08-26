@@ -19,7 +19,7 @@
 
 \item{nfolds}{number of folds in which the dataset is split (default: 10).}
 
-\item{vote}{a logical indicating if the consensus voting (\code{TRUE}) or majority voting (\code{FALSE}) is used (default: \code{FALSE}).}
+\item{vote}{a logical indicating if the consensus voting (\code{TRUE}) or majority voting (\code{FALSE}) is used (default: \code{TRUE}).}
 
 \item{...}{other options to pass to the function.}
 
@@ -42,7 +42,7 @@ This function returns an object of class \code{rfdata}, which contains informati
 \item{param}{a list of the argument values.}
 \item{call}{the function call.}
 
-Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 }
 \description{
 Application of the regEF noise filtering method in a regression dataset.

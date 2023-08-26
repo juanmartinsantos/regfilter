@@ -34,7 +34,7 @@ regAENN <- function(x, ...) UseMethod("regAENN")
 #' \item{param}{a list of the argument values.}
 #' \item{call}{the function call.}
 #'
-#' Note that objects of the class \code{rfdata} support \link{print.rfdata} and \link{summary.rfdata} methods.
+#' Note that objects of the class \code{rfdata} support \link{print.rfdata}, \link{summary.rfdata} and \link{plot.rfdata} methods.
 #'
 #' @references
 #' I. Tomek, \strong{An experiment with the edited nearest-neighbor rule},
